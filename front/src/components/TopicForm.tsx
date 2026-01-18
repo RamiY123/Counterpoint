@@ -8,18 +8,18 @@ interface TopicFormProps {
 }
 
 export function TopicForm({ onSubmit, isLoading }: TopicFormProps) {
-  const [topic, setTopic] = useState('');
+  const [topic, setTopic] = useState('Should AI replace human workers?');
   const [language, setLanguage] = useState('en');
   const [rounds, setRounds] = useState(3);
   const [agentA, setAgentA] = useState<AgentConfig>({
-    name: '',
-    stance: '',
-    personality: '',
+    name: 'The Optimist',
+    stance: 'AI will create more jobs than it displaces and enhance human productivity',
+    personality: 'Enthusiastic, forward-thinking, technology advocate',
   });
   const [agentB, setAgentB] = useState<AgentConfig>({
-    name: '',
-    stance: '',
-    personality: '',
+    name: 'The Skeptic',
+    stance: 'AI poses significant risks to employment and economic stability',
+    personality: 'Cautious, analytical, focused on human impact',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
